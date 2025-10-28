@@ -1,4 +1,4 @@
-package main.java.eatclub_assignment.Entity;
+package com.eatclub.assignment.Entity;
 
 public enum OrderStatus {
     PLACED,

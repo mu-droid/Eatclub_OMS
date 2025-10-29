@@ -17,6 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class OrderItemEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -28,5 +29,4 @@ public class OrderItemEntity {
     private String productId;
     private int quantity;
     private BigDecimal price;
-
 }

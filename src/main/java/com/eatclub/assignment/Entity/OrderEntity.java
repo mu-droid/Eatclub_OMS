@@ -16,6 +16,7 @@ import java.math.*;
 @AllArgsConstructor
 @Builder
 public class OrderEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

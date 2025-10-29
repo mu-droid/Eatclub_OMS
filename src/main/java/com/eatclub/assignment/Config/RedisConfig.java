@@ -46,4 +46,14 @@ public class RedisConfig {
     public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
         return new StringRedisTemplate(redisConnectionFactory);
     }
+
+    @Bean
+    public StreamMessageListenerContainer<String, ?> streamMessageListenerContainer(RedisConnectionFactory factory) {
+        var options = StreamMessageListenerContainer
+                .StreamMessageListenerContainerOptions
+                .builder()
+                .pollTimeout(Duration.ofSeconds(1))
+                .build();
+        return StreamMessageListenerContainer.create(factory, options);
+    }
 }
